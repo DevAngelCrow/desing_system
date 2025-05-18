@@ -7,8 +7,8 @@ const InputCheckBox: React.FC<InputCheckBoxProps> = ({ label, className }) => {
     return (
         <label className="inline-flex items-center">
             <input className="hidden peer" type="checkbox" />
-            <div className={`${className} peer-checked:hidden mr-2`} ></div>
-            <div className={`${className} mr-2 hidden peer-checked:grid`}>
+            <div className={`${className} peer-checked:hidden mr-2 transition-all duration-200`} ></div>
+            <div className={`${className} mr-2 hidden peer-checked:grid transition-all duration-200`}>
                 <svg className="w-3 h-3 text-primary" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24">
                     <path d="M5 13l4 4L19 7" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
