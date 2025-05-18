@@ -7,8 +7,16 @@ import InputCheckBox from "../src/components/inputs/InputCheckBox";
 import InputRadioButton from "../src/components/inputs/InputRadioButton";
 import InputSelect from "../src/components/inputs/InputSelect";
 import Modal from "../src/components/modal/Modal"
+import { useState } from 'react';
 function App() {
   const items = ["Prueba1", "Prueba2", "Prueba3"]
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  }
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  }
   return (
     <>
       <div className='flex flex-col'>
@@ -27,7 +35,8 @@ function App() {
         <br></br>
         <InputSelect items={items}/>
         <br></br>
-        <Modal isOpen content={<div><span>Pruebas pruebas</span></div>}/>
+        <button onClick={handleOpenModal}>Modal</button>
+        <Modal onClose={handleCloseModal} isOpen={isModalOpen} title="Modal" content={<div><span>Pruebas pruebas</span></div>}/>
       </div>
     </>
   )
