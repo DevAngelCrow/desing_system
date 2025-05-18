@@ -35,7 +35,7 @@ function App() {
         <br></br>
         <InputSelect items={items}/>
         <br></br>
-        <button onClick={handleOpenModal}>Modal</button>
+        <Button onClick={handleOpenModal} className='bg-secondary text-primary' label='Modal' />
         <Modal onClose={handleCloseModal} isOpen={isModalOpen} title="Modal" content={<div><span>Pruebas pruebas</span></div>}/>
       </div>
     </>

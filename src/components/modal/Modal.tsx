@@ -7,7 +7,7 @@ const Modal: React.FC<ModalProps> = ({ className, cancelText, onConfirm, onClose
     }
 
     return (
-        <div className={`fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center z-50 transition duration-150 ease-in-out  ${className}`}>
+        <div className={`fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center z-50 transition duration-150 ease-in  ${className}`}>
             <div className="relative bg-white rounded-lg shadow-lg overflow-hidden max-w-md w-full">
                 {title && (
                     <div className="px-6 py-4 border-b">
@@ -20,7 +20,7 @@ const Modal: React.FC<ModalProps> = ({ className, cancelText, onConfirm, onClose
                 {(onConfirm || cancelText) && (
                     <div className="px-6 py-4 bg-gray-50 flex justify-end gap-3">
                         {cancelText && (
-                            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded shadow transition duration-150 ease-in-out" onClick={onConfirm}>
+                            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded shadow transition duration-150 ease-in" onClick={onConfirm}>
                                 {confirmText}
                             </button>
                         )}
