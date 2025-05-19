@@ -2,13 +2,9 @@ import React from "react";
 import type { ModalProps } from "../../interface/Modal.interface";
 
 const Modal: React.FC<ModalProps> = ({ className, cancelText, onConfirm, onClose, confirmText, title, isOpen, content, showCloseButton }) => {
-    if (!isOpen) {
-        return null;
-    }
-
     return (
-        <div className={`fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center z-50 transition duration-150 ease-in  ${className}`}>
-            <div className="relative bg-white rounded-lg shadow-lg overflow-hidden max-w-md w-full">
+        <div className={`fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center z-50 transition-all duration-300 ease-in-out ${isOpen ? "opacity-100" : "opacity-0 pointer-events-none"} ${className}`}>
+            <div className={`relative bg-white rounded-lg shadow-lg overflow-hidden max-w-md w-full transform transition-all duration-300 ease-in-out ${isOpen ? "translate-y-0" : "translate-y-4"}`}>
                 {title && (
                     <div className="px-6 py-4 border-b">
                         <h2 className="text-xl font-semibold">{title}</h2>
