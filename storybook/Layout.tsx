@@ -1,4 +1,3 @@
-import React from "react";
 //import Header from "./Header";
 import { useState } from "react";
 import { JSX } from "@emotion/react/jsx-runtime";
@@ -38,7 +37,7 @@ const componentMap : Record<ComponentKey, JSX.Element> = {
     <Modal onClose={handleCloseModal} isOpen={isModalOpen} title="Modal" content={<div><span>Pruebas pruebas</span></div>} /></div>
 };
   return (
-    <div className="flex h-screen">
+    <div className="flex h-screen justify-start">
       {/* Sidebar */}
       <aside className="w-64 bg-gray-100 border-r p-4">
         <h2 className="text-xl font-bold mb-4">Componentes</h2>
