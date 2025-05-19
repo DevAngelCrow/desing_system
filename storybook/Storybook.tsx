@@ -6,7 +6,6 @@ import InputCheckBox from "../src/components/inputs/InputCheckBox";
 import InputRadioButton from "../src/components/inputs/InputRadioButton";
 import InputSelect from "../src/components/inputs/InputSelect";
 import Modal from "../src/components/modal/Modal";
-import Menu from "../storybook/Menu";
 import { useState } from 'react';
 
 
